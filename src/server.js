@@ -91,6 +91,7 @@ const init = async () => {
       newResponse.code(response.statusCode);
       return newResponse;
     }
+    if (response instanceof Error) console.error(response);
 
     return h.continue;
   });
